@@ -1,0 +1,260 @@
+header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo-container img {
+    height: 60px; /* Logo size */
+    width: auto;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navigation ul li {
+    margin: 0 20px;
+  }
+  
+  .navigation ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-button, .cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    /* Add any other reset styles you may need */
+  }
+  
+  .announcement-bar {
+    background-color: #747272; /* Light grey background */
+    color: #333; /* Dark text */
+    text-align: center;
+    padding:6px 0;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box; /* This ensures padding does not add to the total width */
+  }
+  
+  /* Rest of your CSS */
+  
+  
+  /* Optional: add some hover effect for the link */
+  .announcement-bar a:hover {
+    text-decoration: underline;
+  }
+  .top-level-menu, .dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .top-level-menu > li {
+    position: relative;
+    float: left; /* if you want horizontal menu */
+  }
+  
+  .top-level-menu > li > a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: #333; /* Menu text color */
+    background: #fff; /* Menu background color */
+  }
+  
+/* Add this inside your SkateIt.css file */
+
+/* Hide the dropdown by default */
+/* Ensure the navigation list items are aligned horizontally */
+/* Navigation link styling */
+.navigation ul li {
+    position: relative;
+    margin: 0 20px;
+  }
+  
+  .navigation ul li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s; /* Smooth transition for text color */
+  }
+  
+  /* Underline effect */
+  .navigation ul li a::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+  }
+  
+  .navigation ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+    background: #000; /* Black background for the underline */
+  }
+  
+  /* Dropdown styling */
+  .navigation .dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+  }
+  
+  /* Display the dropdown on hover with animation */
+  .navigation li:hover > .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Dropdown link styling */
+  .dropdown li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Align links vertically */
+  }
+  
+  .dropdown li a:hover {
+    background-color: #ddd;
+  }
+  
+
+  .product-section {
+    display: flex;
+    margin-bottom: 20px; /* Spacing between sections */
+  }
+  
+  .product-image, .product-gif {
+    flex: 1; /* Take up equal space */
+  }
+  
+  .product-image img, .product-gif img {
+    width: 100%; /* Ensure the image takes up the full container width */
+    display: block;
+  }
+  
+  .product-details {
+    flex: 2; /* Product details take up twice the space as the image */
+    padding: 0 20px; /* Spacing around the text */
+  }
+  
+  .product-details h2 {
+    margin: 0 0 10px 0; /* Spacing around the heading */
+  }
+  
+  .product-details .price {
+    font-weight: bold;
+  }
+  
+  .shop-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split into two columns */
+    grid-template-rows: auto 1fr; /* Auto-size the top row, and fill the space with the second row */
+  }
+  
+  .full-width-image {
+    grid-column: 1 / -1; /* Span across all columns */
+  }
+  
+  .half-width-image {
+    grid-column: span 1 / auto; /* Each takes up one column */
+  }
+  
+   .half-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .full-width-image img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh; /* This will limit the height of the image */
+    object-fit: cover; /* This will cover the area, potentially cropping the image */
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust minmax for your preferred size */
+    gap: 16px; /* Adjust gap size to your preference */
+    margin: auto; /* Center the grid */
+    max-width: 1200px; /* Maximum width of the grid */
+    padding: 16px;
+  }
+  
+  .product {
+    text-align: center; /* Center the product text */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Use the current text color for links */
+  }
+  
+  .product img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .product h3 {
+    margin: 8px 0; /* Margin around the product name */
+  }
+  
+  .price {
+    font-weight: bold; /* Make price text bold */
+  }
+  .product {
+    /* Existing styles */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .product:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+  }
+  
+  /* Additional styles and responsive adjustments as needed */
+  
